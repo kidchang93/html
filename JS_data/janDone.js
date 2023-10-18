@@ -2,10 +2,18 @@
 
 // 잔돈의 갯수를 구하라
 
-const arr = [10, 50, 100, 500, 1000, 5000, 10000, 50000];
-const num = 39820;
+function coinChange(money) {
+	const coins = [50000, 10000, 5000, 1000, 500, 100, 50, 10];
 
-var num2 = num % 10000;
-console.log(num2);
-var finalNum = (num - num2) * 0.0001;
-console.log(finalNum);
+	const change = [];
+	for (let i = 0; money !== 0; i++) {
+		const count = money / (coins[i] >= 1) ? Math.floor(money / coins[i]) : 0;
+		change[i] = {
+			value: coins[i],
+			count: count,
+		};
+		money = count > 0 ? (money -= coins[i] * count) : money;
+	}
+	return change;
+}
+console.log(coinChange(405620));
