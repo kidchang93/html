@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Flex&Grid</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.container {
+				display: grid;
+				gap: 10px;
+				grid-template-rows: 200px 200px 200px 200px 200px;
+				grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			}
+
+			.item {
+				color: black;
+				background-color: bisque;
+				z-index: 0;
+			}
+			.item1 {
+				/* background-image: url(./images/town.jpg); */
+				background-size: cover;
+				grid-row: 1 / span 2;
+			}
+			.item2 {
+				background-image: url(./images/star.jpg);
+				background-size: cover;
+				grid-column: 2 / span 2;
+			}
+			.item3 {
+				background-image: url(./images/elephant.jpg);
+				background-size: cover;
+				grid-row: 2 / span 3;
+			}
+			.item4 {
+				background-image: url(./images/building.jpg);
+				background-size: cover;
+			}
+			.item5 {
+				background-image: url(./images/skyline.jpg);
+				background-size: cover;
+				grid-row: 2 / span 3;
+				grid-column: 4;
+			}
+			.item6 {
+				background-size: cover;
+			}
+			.item9 {
+				background-image: url(./images/stone.jpg);
+				background-size: cover;
+				grid-row: 3 / span 3;
+			}
+			.item10 {
+				background-image: url(./images/stone.jpg);
+				background-size: cover;
+			}
+			.item11 {
+				/* background-image: url(./images/stone.jpg); */
+				background-size: cover;
+				grid-row: 3 / span 3;
+			}
+			.item14 {
+				background-image: url(./images/building.jpg);
+				background-size: cover;
+				grid-row: 2 / span 3;
+			}
+			.item15 {
+				background-image: url(./images/cat.jpg);
+				background-size: cover;
+				grid-column: 4 / span 2;
+			}
+			.item12 {
+				background-image: url(./images/stone.jpg);
+			}
+			.text {
+				position: relative;
+				text-align: center;
+				font-size: 30px;
+				color: black;
+			}
+			.text2 {
+				position: relative;
+				top: 50%;
+				transform: translateY(60%);
+				font-size: 50px;
+				color: yellow;
+			}
+			.text3 {
+				position: relative;
+				top: 0;
+				transform: translateY(-20%);
+				font-size: 50px;
+				color: yellow;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="item item1">
+				<div class="text">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis
+					sint sapiente dignissimos quia sunt quibusdam nihil modi totam odit
+					corporis ea id est, quas rem temporibus aut accusamus ipsa. Harum.
+				</div>
+			</div>
+			<div class="item item2"><div class="text"></div></div>
+			<div class="item item3"><div class="text"></div></div>
+			<div class="item item4"><div class="text2"></div></div>
+			<div class="item item5"><div class="text3"></div></div>
+			<div class="item item6">
+				<div class="text">
+					Lorem ipsum dolor sit, fugit ducimus soluta sunt. Officiis!
+				</div>
+			</div>
+			<div class="item item9"><div class="text3"></div></div>
+			<div class="item item10">
+				<div class=" "></div>
+				10
+			</div>
+			<div class="item item11">
+				<div class="text">
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas
+					voluptate eos ipsam maiores soluta laboriosam distinctio excepturi
+					autem deserunt debitis necessitatibus, voluptas inventore expedita,
+					sed vel earum, libero porro asperiores.
+				</div>
+			</div>
+			<div class="item item12">
+				<div class=" "></div>
+			</div>
+
+			<div class="item item14">
+				<div class=" "></div>
+				14
+			</div>
+			<div class="item item15">
+				<div class=" "></div>
+				15
+			</div>
+		</div>
+	</body>
+</html>
