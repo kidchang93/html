@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- 스크롤바 없애기 -->
+		<style>
+			html {
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<button onclick="popup()">팝업</button>
+		<script>
+			function popup() {
+				popupWindow = window.open(
+					"popup.html",
+					"팝업",
+					"width=200, height=100",
+					"resizable"
+				);
+				// 팝업창의 크기를 변경하지 못하도록 한다.
+				popupWindow.resizeTo(200, 200);
+				popupWindow.onresize = (_) => {
+					popupWindow.resizeTo(200, 200);
+				};
+			}
+		</script>
+	</body>
+</html>

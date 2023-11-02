@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Flex&Grid</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.container {
+				display: grid;
+				gap: 10px;
+				grid-template-rows: 200px 200px 200px 200px;
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+			}
+
+			.item {
+				color: black;
+				background-color: bisque;
+				z-index: 0;
+			}
+			.item1 {
+				background-image: url(./images/town.jpg);
+				background-size: cover;
+				grid-row: 1 / span 3;
+			}
+			.item2 {
+				background-image: url(./images/star.jpg);
+				background-size: cover;
+				grid-column: 2 / span 3;
+			}
+			.item3 {
+				background-image: url(./images/elephant.jpg);
+				background-size: cover;
+				grid-row: 2 / span 2;
+			}
+			.item5 {
+				background-image: url(./images/skyline.jpg);
+				background-size: cover;
+				grid-row: 2 / span 3;
+				grid-column: 4;
+			}
+			.item9 {
+				background-image: url(./images/stone.jpg);
+				background-size: cover;
+				grid-column: 1 / span 3;
+			}
+			.item4 {
+				background-image: url(./images/building.jpg);
+				background-size: cover;
+			}
+			.item6 {
+				background-image: url(./images/cat.jpg);
+				background-size: cover;
+			}
+			.text {
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+				font-size: 50px;
+				color: yellow;
+			}
+			.text2 {
+				position: relative;
+				top: 50%;
+				transform: translateY(60%);
+				font-size: 50px;
+				color: yellow;
+			}
+			.text3 {
+				position: relative;
+				top: 0;
+				transform: translateY(-20%);
+				font-size: 50px;
+				color: yellow;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="item item1">
+				<div class="text">A</div>
+			</div>
+			<div class="item item2"><div class="text">B</div></div>
+			<div class="item item3"><div class="text">C</div></div>
+			<div class="item item4"><div class="text2">D</div></div>
+			<div class="item item5"><div class="text3">F</div></div>
+			<div class="item item6"><div class="text2">E</div></div>
+			<div class="item item9"><div class="text3">G</div></div>
+		</div>
+	</body>
+</html>
