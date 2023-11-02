@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .container {
+      margin: 0;
+      display: grid;
+      /* border: 1px solid black; */
+      height: auto;
+      width: auto;
+      position: static;
+      justify-content: center;
+    }
+    .users {
+      display: flex;
+      border-bottom: 2px dotted grey;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      width: 0 auto;
+      position: relative;
+      justify-content: space-between;
+      height: 50px;
+      font-size: 40px;
+      padding: 10px;
+    }
+    .opinion {
+      display: flex;
+      border-bottom: 2px dotted grey;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      width: auto;
+      position: relative;
+      justify-content: space-between;
+      height: 50px;
+      font-size: 40px;
+      padding: 10px;
+    }
+    select {
+      width: 200px;
+    }
+    .city {
+      display: flex;
+      border-bottom: 2px dotted grey;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      position: relative;
+      justify-content: space-between;
+      height: 50px;
+      padding: 10px;
+      font-size: 40px;
+    }
+    .fruits {
+      display: flex;
+      border-bottom: 2px dotted grey;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      position: relative;
+      justify-content: space-between;
+      height: 50px;
+      padding: 10px;
+      font-size: 30px;
+      align-items: center;
+    }
+    .identity {
+      display: flex;
+      border-bottom: 2px dotted grey;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      position: relative;
+      justify-content: space-around;
+      height: 100px;
+      padding: 10px;
+      font-size: 30px;
+      align-items: center;
+    }
+    fieldset {
+      border: none;
+    }
+    .check {
+      display: flex;
+      border-bottom: 2px dotted grey;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      position: relative;
+      justify-content: space-around;
+      height: 50px;
+      padding: 10px;
+    }
+    .check > input {
+      width: 200px;
+      align-items: center;
+    }
+    h1 {
+      text-align: center;
+      margin: 100px;
+    }
+  </style>
+  <body>
+    <h1>Form 7가지 속성 적용</h1>
+    <div class="container">
+      <form action="join.do" method="post" name="frmMember">
+        <div class="users">
+          <label>아이디</label>
+          <input
+            type="text"
+            name="userid"
+            id="userid"
+            placeholder="아이디를 입력해주세요."
+          />
+          <label>비밀번호</label>
+          <input
+            type="password"
+            name="userpw"
+            id="userpw"
+            placeholder="암호를 입력해주세요."
+          />
+        </div>
+        <div class="opinion">
+          <label>본문내용</label><br />
+          <textarea name="opinion" cols="100px"></textarea>
+        </div>
+        <!-- 박스 -->
+        <div class="city">
+          지역
+          <select name="city" id="city">
+            <option value="서울시">서울시</option>
+            <option value="경기도">경기도</option>
+            <option value="강원도">강원도</option>
+            <option value="충청도">충청도</option>
+            <option value="전라도">전라도</option>
+            <option value="경상도">경상도</option>
+            <option value="제주도">제주도</option>
+          </select>
+          <!-- 리스트 -->
+          <select name="city" id="city" multiple>
+            <option value="강북구">강북구</option>
+            <option value="강남구">강남구</option>
+            <option value="서초구">서초구</option>
+            <option value="중원구">중원구</option>
+            <option value="분당구">분당구</option>
+          </select>
+        </div>
+        <fieldset>
+          <div class="fruits">
+            <legend>좋아하는 과일</legend>
+            <input
+              type="checkbox"
+              id="watermelon"
+              name="fruits"
+              value="watermelon"
+              checked
+            />
+            <label for="watermelon">수박</label><br />
+            <input
+              type="checkbox"
+              id="melon"
+              name="fruits"
+              value="melon"
+              checked
+            />
+            <label for="melon">멜론</label><br />
+            <input
+              type="checkbox"
+              id="strawberry"
+              name="fruits"
+              value="strawberry"
+              checked
+            />
+            <label for="strawberry">딸기</label><br />
+          </div>
+        </fieldset>
+        <div class="identity">
+          개인성격
+          <input type="radio" name="identity" value="fast" checked />
+          fast
+          <input type="radio" name="identity" value="normal" />
+          normal
+          <input type="radio" name="identity" value="slow" />
+          slow
+        </div>
+        <div class="check">
+          <input type="submit" value="확인" />
+          <input type="reset" value="취소" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

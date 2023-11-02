@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형 웹 만들기</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 20px;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3);
+        grid-template-rows: repeat(3);
+        grid-template-areas:
+          'header header header'
+          'sidebar content content'
+          'footer footer footer';
+      }
+      h1 {
+        text-align: center;
+      }
+      #header {
+        grid-area: header;
+        background-color: blue;
+        text-align: center;
+        font-size: 50px;
+      }
+      #sidebar {
+        grid-area: sidebar;
+        background-color: cyan;
+        text-align: center;
+        font-size: 50px;
+      }
+      #content {
+        grid-area: content;
+        background-color: pink;
+        text-align: center;
+        font-size: 50px;
+      }
+      #footer {
+        grid-area: footer;
+        background-color: yellow;
+        text-align: center;
+        font-size: 50px;
+      }
+      @media (max-width: 600px) {
+        /*가로 너비가 600px 이하일 때 아래 스타일 적용*/
+        .grid-container {
+          display: block;
+        }
+        .grid-container,
+        #content {
+          min-height: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>반응형 웹 페이지 만들기</h1>
+    <div class="grid-container">
+      <p id="header">header</p>
+      <p id="sidebar">sidebar</p>
+      <p id="content">content</p>
+      <p id="footer">footer</p>
+    </div>
+  </body>
+</html>
