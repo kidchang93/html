@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Flex&Grid</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.container {
+				display: flex;
+				border: 1px solid black;
+				height: 50px;
+				flex-direction: row;
+				flex-flow: nowrap;
+				justify-content: space-between;
+			}
+			.item1 {
+				border: 1px solid black;
+				background-color: rgb(0, 255, 85);
+				flex-grow: 1;
+			}
+			.item2 {
+				border: 1px solid black;
+				flex-grow: 1;
+				background-color: rgb(255, 0, 0);
+			}
+			.item3 {
+				border: 1px solid black;
+				background-color: rgb(2, 6, 255);
+				flex-grow: 1;
+			}
+			.item4 {
+				border: 1px solid black;
+				background-color: rgb(255, 174, 0);
+				flex-grow: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="item1">
+				A
+				<button class="home_button"></button>
+			</div>
+			<div class="item2">B</div>
+			<div class="item3">C</div>
+			<div class="item4">D</div>
+		</div>
+	</body>
+</html>
