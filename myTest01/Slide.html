@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- jQuery CDN 추가 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- bxSlider 플러그인 CDN 추가 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    />
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <style>
+      .slider-wrap {
+        max-width: 640px;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('.slider').bxSlider();
+      });
+    </script>
+  </head>
+  <body>
+    <div class="slider-wrap">
+      <div class="slider">
+        <div><img src="images2/1.jpeg" alt="이미지1" /></div>
+        <div><img src="images2/2.jpg" alt="이미지2" /></div>
+        <div><img src="images2/3.png" alt="이미지3" /></div>
+      </div>
+    </div>
+  </body>
+</html>
